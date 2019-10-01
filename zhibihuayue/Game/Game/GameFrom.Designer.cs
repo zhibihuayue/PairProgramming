@@ -44,14 +44,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Num = new System.Windows.Forms.Label();
             this.Rollpic = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.Res = new System.Windows.Forms.Label();
-            this.Num = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.Res = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -252,6 +252,16 @@
             this.panel4.Size = new System.Drawing.Size(276, 408);
             this.panel4.TabIndex = 2;
             // 
+            // Num
+            // 
+            this.Num.AutoSize = true;
+            this.Num.Font = new System.Drawing.Font("宋体", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Num.Location = new System.Drawing.Point(50, 307);
+            this.Num.Name = "Num";
+            this.Num.Size = new System.Drawing.Size(181, 40);
+            this.Num.TabIndex = 4;
+            this.Num.Text = "投掷点数";
+            // 
             // Rollpic
             // 
             this.Rollpic.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -283,6 +293,16 @@
             this.panel5.Size = new System.Drawing.Size(276, 55);
             this.panel5.TabIndex = 1;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(78, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 28);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "开始新的游戏";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label4);
@@ -292,6 +312,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(310, 408);
             this.panel6.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(255, 15);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "游戏流程:预测点数→丢骰子→下一局";
+            this.label4.Click += new System.EventHandler(this.Label4_Click_1);
             // 
             // Res
             // 
@@ -303,36 +333,6 @@
             this.Res.Size = new System.Drawing.Size(92, 27);
             this.Res.TabIndex = 0;
             this.Res.Text = "游戏结果";
-            // 
-            // Num
-            // 
-            this.Num.AutoSize = true;
-            this.Num.Font = new System.Drawing.Font("宋体", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Num.Location = new System.Drawing.Point(50, 307);
-            this.Num.Name = "Num";
-            this.Num.Size = new System.Drawing.Size(181, 40);
-            this.Num.TabIndex = 4;
-            this.Num.Text = "投掷点数";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(78, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 28);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "开始新的游戏";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(255, 15);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "游戏流程:预测点数→丢骰子→下一局";
-            this.label4.Click += new System.EventHandler(this.Label4_Click_1);
             // 
             // GameFrom
             // 

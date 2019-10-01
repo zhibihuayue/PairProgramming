@@ -5,10 +5,9 @@ using Entity;
 using DataBase;
 namespace DaoLayer
 {
-    class DaoDice
+    public class DaoDice
     {
-        public class StudentDAO
-        {
+
             public int getDiceRecordsNums()
             {
                 List<Dice> DiceList = DiceData.getAll();
@@ -21,6 +20,5 @@ namespace DaoLayer
                 return diceList;
             }
 
-        }
     }
 }

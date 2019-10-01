@@ -10,15 +10,27 @@ using System.Windows.Forms;
 using System.Threading;
 using DaoLayer;
 using Entity;
-namespace Game
+ namespace Game
 {
     public partial class GameFrom : Form
     {
-        List<Dice> diceList;
+        List<Dice> numList;
+
         int i = 0;
-        public GameFrom()
+        public GameFrom()//接口模拟练习
         {
             InitializeComponent();
+            DaoDice DiceData = new DaoDice();
+            numList = DiceData.getAllDice();//获取骰子数字源
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Num", Type.GetType("System.String"));//构造数据源
+
+
+            foreach (Dice stu in numList)
+            {
+                dt.Rows.Add(stu.Num);
+            } //数据加载
         }
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
@@ -75,25 +87,27 @@ namespace Game
         {
 
         }
- 
+
 
         private void Label3_Click_1(object sender, EventArgs e)
         {
-     
-        }
-     
 
-        private void Button1_Click(object sender, EventArgs e)
+        }
+
+
+        public void Button1_Click(object sender, EventArgs e)
         {
-            if(i==0)
+
+
+            if (i == 0)
             {
                 new False().Show();
                 return;
             }
-            Rollpic.Visible = true; 
+            Rollpic.Visible = true;
             Random random = new Random();
             int n = random.Next(1, 6);
-            if(n==1)
+            if (n == 1)
             {
                 Num.Text = "   1";
             }
@@ -122,7 +136,7 @@ namespace Game
 
             if (n == i)
             {
-                Res.Text="你猜对了";
+                Res.Text = "你猜对了";
             }
             if (n > i)
             {
@@ -172,7 +186,7 @@ namespace Game
 
         public void Rollpic_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void Button2_Click(object sender, EventArgs e)

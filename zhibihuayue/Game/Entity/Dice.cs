@@ -12,11 +12,8 @@ namespace Entity
             get { return num; }
             set { num= value; }
         }
-
-
         public Dice()
         {
-
         }
         public Dice(String num)
         {

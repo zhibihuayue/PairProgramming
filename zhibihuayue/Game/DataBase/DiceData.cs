@@ -28,8 +28,6 @@ namespace DataBase
             diceList.Add(num5);
             Dice num6 = new Dice("6");
             diceList.Add(num6);
-
-
             return diceList;
         }
     }
